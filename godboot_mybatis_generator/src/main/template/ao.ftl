@@ -7,7 +7,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-import lombok.Data;
 
 /**
  * 应用对象 - ${entityName}AO.
@@ -23,7 +22,6 @@ import lombok.Data;
  * @copyright ${copyright}
  */
 @JsonSerialize
-@Data
 public final class ${entityName}AO extends ${entityName} implements Serializable {
     /**
      * 默认的序列化 id.
