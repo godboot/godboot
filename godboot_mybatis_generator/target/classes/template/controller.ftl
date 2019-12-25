@@ -3,7 +3,7 @@ package ${controllerPackage};
 import ${dtoPackage}.${entityName}DTO;
 import ${searchDTOPackage}.${entityName}SearchDTO;
 import ${servicePackage}.I${entityName}Service;
-import com.echeng.biz.passport.model.authorize.UserInfoDTO;
+import com.echeng.biz.passport.model.authorize.SessionUser;
 import com.echeng.biz.passport.util.UserUtils;
 import PageResult;
 import ServiceResult;
@@ -54,7 +54,7 @@ public class ${entityName}Controller {
     @ResponseBody
     public ServiceResult<String> add(HttpServletRequest request, @RequestBody @ApiParam ${entityName}DTO dto) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.add${entityName}(dto, userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -67,7 +67,7 @@ public class ${entityName}Controller {
     @ResponseBody
     public ServiceResult update(HttpServletRequest request, @RequestBody @ApiParam ${entityName}DTO dto) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.update${entityName}(dto, userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -80,7 +80,7 @@ public class ${entityName}Controller {
     @ResponseBody
     public ServiceResult delete(HttpServletRequest request, @RequestBody @ApiParam ${entityName}SearchDTO searchDTO) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.delete${entityName}(searchDTO, userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -93,7 +93,7 @@ public class ${entityName}Controller {
     @ResponseBody
     public ServiceResult disable(HttpServletRequest request, @RequestBody @ApiParam ${entityName}SearchDTO searchDTO) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.disable${entityName}(searchDTO, userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -106,7 +106,7 @@ public class ${entityName}Controller {
     @ResponseBody
     public ServiceResult enable(HttpServletRequest request , @RequestBody @ApiParam ${entityName}SearchDTO searchDTO) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.enable${entityName}(searchDTO, userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -120,7 +120,7 @@ public class ${entityName}Controller {
     @LogAction(Log.OFF)
     public ServiceResult<${entityName}DTO> getById(HttpServletRequest request, @RequestBody @ApiParam ${entityName}SearchDTO searchDTO) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.get${entityName}(searchDTO,userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -134,7 +134,7 @@ public class ${entityName}Controller {
     @LogAction(Log.OFF)
     public ServiceResult<${entityName}DTO> getDetailById(HttpServletRequest request, @RequestBody @ApiParam ${entityName}SearchDTO searchDTO) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             return ${humpEntityName}Service.get${entityName}Detail(searchDTO, userInfoDTO);
         } catch (Exception e) {
             logger.error(getClass().toString(), e);
@@ -148,7 +148,7 @@ public class ${entityName}Controller {
     @LogAction(Log.OFF)
     public ServiceResult<PageResult<List<${entityName}DTO>>> getList(HttpServletRequest request, @RequestBody @ApiParam ${entityName}SearchDTO searchDTO) {
         try {
-            UserInfoDTO userInfoDTO = userUtils.getUserFromRequest(request);
+            SessionUser userInfoDTO = userUtils.getUserFromRequest(request);
             searchDTO.setOrgId(userInfoDTO.getOrgId());
             return ${humpEntityName}Service.get${entityName}List(searchDTO,userInfoDTO);
         } catch (Exception e) {

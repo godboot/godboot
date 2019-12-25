@@ -6,7 +6,7 @@ import ${mapperPackage}.${entityName}GeneratedMapper;
 import ${dtoPackage}.${entityName}DTO;
 import ${entityPackage}.${entityName}Criteria;
 import ${searchDTOPackage}.${entityName}SearchDTO;
-import com.godboot.framework.entity.UserInfoDTO;
+import com.godboot.framework.entity.SessionUser;
 import com.godboot.framework.constant.DATA_ENUM;
 import com.godboot.framework.entity.PageResult;
 import com.godboot.framework.entity.ServiceResult;
@@ -53,7 +53,7 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
 
     @Override
-    public ServiceResult<PageResult<List<${entityName}DTO>>> get${entityName}List(final ${entityName}SearchDTO searchDTO, final UserInfoDTO user) throws InterruptedException {
+    public ServiceResult<PageResult<List<${entityName}DTO>>> get${entityName}List(final ${entityName}SearchDTO searchDTO, final SessionUser user) throws InterruptedException {
         AtomicInteger total = new AtomicInteger();
         AtomicReference<List<${entityName}DTO>> dtoList = new AtomicReference<>();
 
@@ -75,7 +75,7 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
     }
 
     @Override
-    public ServiceResult<Integer> get${entityName}Count(${entityName}SearchDTO searchDTO, UserInfoDTO user) {
+    public ServiceResult<Integer> get${entityName}Count(${entityName}SearchDTO searchDTO, SessionUser user) {
         return ServiceResult.SUCCESS(getListCount(searchDTO), "获取${schema}数量成功");
     }
 
@@ -86,7 +86,7 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public ServiceResult<Boolean> delete${entityName}(${entityName}SearchDTO searchDTO, UserInfoDTO user) {
+    public ServiceResult<Boolean> delete${entityName}(${entityName}SearchDTO searchDTO, SessionUser user) {
         ServiceResult<${entityName}DTO> serviceResult = get${entityName}(searchDTO, user);
         if (!serviceResult.getSuccess() || serviceResult.getData() == null) {
             return ServiceResult.ERROR(serviceResult.getMessage());
@@ -107,11 +107,11 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public ServiceResult<Boolean> update${entityName}Status(${entityName}SearchDTO searchDTO, UserInfoDTO user, DATA_ENUM.STATUS status) {
+    public ServiceResult<Boolean> update${entityName}Status(${entityName}SearchDTO searchDTO, SessionUser user, DATA_ENUM.STATUS status) {
         return update${entityName}Status(searchDTO, user, status, "修改${schema}状态成功");
     }
 
-    private ServiceResult<Boolean> update${entityName}Status(final ${entityName}SearchDTO searchDTO, final UserInfoDTO user, final DATA_ENUM.STATUS status, final String message) {
+    private ServiceResult<Boolean> update${entityName}Status(final ${entityName}SearchDTO searchDTO, final SessionUser user, final DATA_ENUM.STATUS status, final String message) {
         ServiceResult<${entityName}DTO> serviceResult = get${entityName}(searchDTO, user);
         if (!serviceResult.getSuccess() || serviceResult.getData() == null) {
             return ServiceResult.ERROR(serviceResult.getMessage());
@@ -134,7 +134,7 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public ServiceResult<Boolean> update${entityName}(final ${entityName}DTO ${humpEntityName}DTO, final UserInfoDTO user) {
+    public ServiceResult<Boolean> update${entityName}(final ${entityName}DTO ${humpEntityName}DTO, final SessionUser user) {
         ServiceResult<${entityName}DTO> serviceResult = get${entityName}(new ${entityName}SearchDTO(${humpEntityName}DTO.getId()), user);
         if (!serviceResult.getSuccess()) {
             return ServiceResult.ERROR(serviceResult.getMessage());
@@ -183,7 +183,7 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public ServiceResult<String> add${entityName}(final ${entityName}DTO ${humpEntityName}DTO, final UserInfoDTO user) {
+    public ServiceResult<String> add${entityName}(final ${entityName}DTO ${humpEntityName}DTO, final SessionUser user) {
         ValidateResult<Boolean> validateResult = BeanValidateUtil.validate(${humpEntityName}DTO);
         if (!validateResult.getSuccess()) {
             return ServiceResult.ERROR(validateResult.getMessage());
@@ -228,7 +228,7 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
     }
 
     @Override
-    public ServiceResult<${entityName}DTO> get${entityName}(final ${entityName}SearchDTO searchDTO, final UserInfoDTO user) {
+    public ServiceResult<${entityName}DTO> get${entityName}(final ${entityName}SearchDTO searchDTO, final SessionUser user) {
         if (StringUtils.isEmpty(searchDTO.getId())) {
         return ServiceResult.ERROR("ID不能为空");
         }
@@ -247,18 +247,18 @@ public class ${entityName}ServiceImpl implements I${entityName}Service {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public ServiceResult<Boolean> disable${entityName}(${entityName}SearchDTO searchDTO, final UserInfoDTO user) {
+    public ServiceResult<Boolean> disable${entityName}(${entityName}SearchDTO searchDTO, final SessionUser user) {
         return update${entityName}Status(searchDTO, user, DATA_ENUM.STATUS.DISABLE, "停用${schema}成功");
     }
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public ServiceResult<Boolean> enable${entityName}(${entityName}SearchDTO searchDTO, final UserInfoDTO user) {
+    public ServiceResult<Boolean> enable${entityName}(${entityName}SearchDTO searchDTO, final SessionUser user) {
         return update${entityName}Status(searchDTO, user, DATA_ENUM.STATUS.ENABLE, "启用${schema}成功");
     }
 
     @Override
-    public ServiceResult<${entityName}DTO> get${entityName}Detail(${entityName}SearchDTO searchDTO, final UserInfoDTO user) {
+    public ServiceResult<${entityName}DTO> get${entityName}Detail(${entityName}SearchDTO searchDTO, final SessionUser user) {
         if (StringUtils.isEmpty(searchDTO.getId())) {
             return ServiceResult.ERROR("ID不能为空");
         }

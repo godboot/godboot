@@ -1,6 +1,6 @@
 package ${servicePackage}.impl;
 
-import com.godboot.framework.entity.UserInfoDTO;
+import com.godboot.framework.entity.SessionUser;
 import com.godboot.framework.constant.DATA_ENUM;
 import com.godboot.framework.entity.PageResult;
 import com.godboot.framework.entity.ServiceResult;
@@ -30,7 +30,7 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<PageResult<List<${entityName}DTO>>> get${entityName}List(${entityName}SearchDTO searchDTO, UserInfoDTO user) throws InterruptedException;
+    ServiceResult<PageResult<List<${entityName}DTO>>> get${entityName}List(${entityName}SearchDTO searchDTO, SessionUser user) throws InterruptedException;
 
     /**
     * 获取${schema}数量
@@ -39,7 +39,7 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<Integer> get${entityName}Count(${entityName}SearchDTO searchDTO, UserInfoDTO user);
+    ServiceResult<Integer> get${entityName}Count(${entityName}SearchDTO searchDTO, SessionUser user);
 
     /**
     * 删除${schema}信息
@@ -48,7 +48,7 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<Boolean> delete${entityName}(${entityName}SearchDTO searchDTO, UserInfoDTO user);
+    ServiceResult<Boolean> delete${entityName}(${entityName}SearchDTO searchDTO, SessionUser user);
 
     /**
     * 修改${schema}状态
@@ -58,7 +58,7 @@ public interface I${entityName}Service {
     * @param status    修改状态
     * @return
     */
-    ServiceResult<Boolean> update${entityName}Status(${entityName}SearchDTO searchDTO, UserInfoDTO user, DATA_ENUM.STATUS status);
+    ServiceResult<Boolean> update${entityName}Status(${entityName}SearchDTO searchDTO, SessionUser user, DATA_ENUM.STATUS status);
 
     /**
     * 修改${schema}信息
@@ -67,7 +67,7 @@ public interface I${entityName}Service {
     * @param user    当前操作用户
     * @return
     */
-    ServiceResult<Boolean> update${entityName}(${entityName}DTO ${humpEntityName}DTO, UserInfoDTO user);
+    ServiceResult<Boolean> update${entityName}(${entityName}DTO ${humpEntityName}DTO, SessionUser user);
 
     /**
     * 添加${schema}信息
@@ -76,7 +76,7 @@ public interface I${entityName}Service {
     * @param user    当前操作用户
     * @return
     */
-    ServiceResult<String> add${entityName}(${entityName}DTO ${humpEntityName}DTO, UserInfoDTO user);
+    ServiceResult<String> add${entityName}(${entityName}DTO ${humpEntityName}DTO, SessionUser user);
 
     /**
     * 查询${schema}信息
@@ -85,7 +85,7 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<${entityName}DTO> get${entityName}(${entityName}SearchDTO searchDTO, UserInfoDTO user);
+    ServiceResult<${entityName}DTO> get${entityName}(${entityName}SearchDTO searchDTO, SessionUser user);
 
     /**
     * 禁用${schema}状态
@@ -94,7 +94,7 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<Boolean> disable${entityName}(${entityName}SearchDTO searchDTO, UserInfoDTO user);
+    ServiceResult<Boolean> disable${entityName}(${entityName}SearchDTO searchDTO, SessionUser user);
 
     /**
     * 启用${schema}状态
@@ -103,7 +103,7 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<Boolean> enable${entityName}(${entityName}SearchDTO searchDTO, UserInfoDTO user);
+    ServiceResult<Boolean> enable${entityName}(${entityName}SearchDTO searchDTO, SessionUser user);
 
     /**
     * 查询${schema}详情
@@ -112,6 +112,6 @@ public interface I${entityName}Service {
     * @param user      当前操作用户
     * @return
     */
-    ServiceResult<${entityName}DTO> get${entityName}Detail(${entityName}SearchDTO searchDTO, UserInfoDTO user);
+    ServiceResult<${entityName}DTO> get${entityName}Detail(${entityName}SearchDTO searchDTO, SessionUser user);
 }
 

@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * <p>
  * 对象中文名 - 账户.
  * <p>
- * 该类于 2019-12-25 19:34:05 生成，请勿手工修改！
+ * 该类于 2019-12-25 19:43:50 生成，请勿手工修改！
  * </p>
  *
  * @see       AccountGeneratedMapper

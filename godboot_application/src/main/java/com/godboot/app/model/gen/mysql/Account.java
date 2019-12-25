@@ -10,11 +10,11 @@ import java.util.Date;
  * <p>
  * 对象中文名 - 账户.
  * <p>
- * 该类于 2019-12-25 19:34:05 首次生成，后由开发手工维护。
+ * 该类于 2019-12-25 19:43:50 首次生成，后由开发手工维护。
  * </p>
  * 
  * @author    路德维希
- * @version   1.0, 2019-12-25 19:34:05
+ * @version   1.0, 2019-12-25 19:43:50
  * @copyright goddoitnow@gmail.com
  */
 @ApiModel(value = "Account")

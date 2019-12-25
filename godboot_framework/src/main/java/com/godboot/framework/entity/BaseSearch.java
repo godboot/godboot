@@ -137,7 +137,7 @@ public abstract class BaseSearch implements Serializable {
         this.excludeIdList = new ArrayList<String>();
         this.excludeDeleteStatus = Boolean.TRUE;
         this.enableStatus = Boolean.FALSE;
-        this.page = new Page();
+        this.page = new Page(0, 20);
     }
 
     /**

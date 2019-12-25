@@ -61,13 +61,19 @@ public class AccountServiceImpl implements IAccountService {
         CountDownLatch countDownLatch = new CountDownLatch(2);
 
         threadPoolTaskExecutor.execute(() -> {
-            total.set(getListCount(searchDTO));
-            countDownLatch.countDown();
+            try {
+                total.set(getListCount(searchDTO));
+            } finally {
+                countDownLatch.countDown();
+            }
         });
 
         threadPoolTaskExecutor.execute(() -> {
-            dtoList.set(accountCustomizedMapper.selectAccountListBySearchDTO(searchDTO));
-            countDownLatch.countDown();
+            try {
+                dtoList.set(accountCustomizedMapper.selectAccountListBySearchDTO(searchDTO));
+            } finally {
+                countDownLatch.countDown();
+            }
         });
 
         countDownLatch.await();

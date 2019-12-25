@@ -52,7 +52,7 @@ class DemoApplicationTests {
         ArrayList<AccountDTO> value = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            AccountDTO accountDTO = new AccountDTO(1, "4878", "123456", 1, 0);
+            AccountDTO accountDTO = new AccountDTO(i, "4878", "123456", 1, 0);
             value.add(accountDTO);
         }
 
