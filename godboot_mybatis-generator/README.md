@@ -1,0 +1,18 @@
+echeng-mybatis代码生成插件
+
+pom配置参数说明：
+appObjectPackage AO包路径
+entityPackage POJO包路径
+mapperPackage mybatis-mapper文件包路径
+dtoPackage DTO包路径
+searchDTOPackage 查询DTO包路径
+servicePackage 服务类包路径
+customizedMapperPackage 自定义查询mapper包路径
+currentArtifactId 当前工程ArtifactId
+targetArtifactId 目标工程ArtifactId，主要用于生成dto和服务接口
+dubboConfigPackage dubbo配置文件路径
+whetherGenDTO 是否生成DTO
+whetherGenSearchDTO 是否生成查询DTO
+whetherGenService 是否生成服务类
+whetherGenCustomizedMapper 是否生成自定义查询mapper
+excludeGenServiceEntity 不生成服务类的Entity名，像关系表就不用生成服务类
