@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e73580d-fce9-4b8f-95ad-4d750812b9e8" name="Default Changelist" comment="提交基础框架">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/godboot-mybatis-generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/godboot_framework.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/godboot/framework/plugin/mybatis/MySQLPaginationPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/godboot/framework/plugin/mybatis/MySQLPaginationPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/java/com/godboot/maven/plugin/gen/GenMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/java/com/godboot/maven/plugin/gen/GenMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/java/com/godboot/maven/plugin/modify/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/java/com/godboot/maven/plugin/modify/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/java/com/godboot/maven/plugin/modify/ModifyMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/java/com/godboot/maven/plugin/modify/ModifyMojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/ao.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/ao.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/controller.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/controller.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/customizedMapper.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/customizedMapper.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/customizedMapperXml.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/customizedMapperXml.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/dto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/dto.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/dubboConsumer.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/dubboConsumer.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/dubboProvider.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/dubboProvider.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/dubboService.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/dubboService.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/generatedMapper.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/generatedMapper.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/searchDTO.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/searchDTO.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/service.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/service.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godboot_mybatis-generator/src/main/template/serviceImpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../godboot_mybatis_generator/src/main/template/serviceImpl.ftl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\WORK\CGA\godboot\godboot\godboot_framework\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VTIdmcsnHWXvlkv94LSn4FnnHM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.MainApplication">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="godboot-framework" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="godboot-framework" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="godboot-application" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.godboot.app.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="godboot_application" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ludwig.demo.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e73580d-fce9-4b8f-95ad-4d750812b9e8" name="Default Changelist" comment="" />
+      <created>1577270747832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577270747832</updated>
+      <workItem from="1577270750446" duration="257000" />
+      <workItem from="1577271632823" duration="1035000" />
+      <workItem from="1577272717243" duration="1075000" />
+    </task>
+    <task id="LOCAL-00001" summary="提交基础框架">
+      <created>1577270895712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577270895712</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交基础框架" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交基础框架" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Project_Structure" timestamp="1577272831858">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1577272831858" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577272329156">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1577272329156" />
+    <state x="504" y="117" key="CommitChangelistDialog2" timestamp="1577271830729">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="504" y="117" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1577271830729" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1577272805163">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1577272805163" />
+    <state width="1877" height="393" key="GridCell.Tab.0.bottom" timestamp="1577273649122">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1577273649122" />
+    <state width="1877" height="393" key="GridCell.Tab.0.center" timestamp="1577273649122">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1577273649122" />
+    <state width="1877" height="393" key="GridCell.Tab.0.left" timestamp="1577273649122">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1577273649122" />
+    <state width="1877" height="393" key="GridCell.Tab.0.right" timestamp="1577273649122">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="393" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1577273649122" />
+    <state x="600" y="222" key="NewModule_or_Project.wizard" timestamp="1577272756825">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="600" y="222" key="NewModule_or_Project.wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1577272756825" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1577273701409">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1577273701409" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1577271846977">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1577271846977" />
+    <state x="636" y="258" width="1096" height="769" key="find.popup" timestamp="1577273302224">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="636" y="258" width="1096" height="769" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1577273302224" />
+    <state x="616" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1577273399210">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="178" width="670" height="676" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1577273399210" />
+  </component>
+</project>

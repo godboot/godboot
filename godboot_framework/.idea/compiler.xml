@@ -6,11 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="godboot_framework" />
+        <module name="godboot-framework" />
+        <module name="godboot-mybatis-generator" />
+        <module name="godboot-application" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="godboot_framework" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="godboot-application" target="1.8" />
+      <module name="godboot-framework" target="1.5" />
+      <module name="godboot-mybatis-generator" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="godboot-application" options="-parameters" />
+    </option>
   </component>
 </project>

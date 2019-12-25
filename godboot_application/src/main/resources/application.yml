@@ -1,0 +1,46 @@
+#端口号
+server:
+  port: 80
+#Spring配置
+spring:
+  application:
+    name: app
+#  控制台输出彩色输出
+  output:
+    ansi:
+      enabled: always
+  #  数据源
+  datasource:
+    username: root
+    password: zhudameng
+    url: jdbc:mysql://192.168.1.195:3306/echeng_122?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+#  整合Redis
+  redis:
+    host: 192.168.1.195
+    port: 6379
+    password:
+    timeout: 5000
+    jedis:
+      pool:
+        max-idle: 2000
+        max-wait: 10000
+#整合MyBatis
+mybatis:
+  #  扫描数据持久对应的实体类 路径 Package级别
+  type-aliases-package: com.godboot.app.entity
+  #  MyBatis对应的xml文件路径
+  mapper-locations: classpath:com.godboot.app.mapper/*/*.xml
+#整合Dubbo框架
+dubbo:
+  registry:
+    address: zookeeper://192.168.1.195:2181?backup=192.168.1.195:2182,192.168.1.195:2183
+    file: ${user.home}/dubbo-cache/${spring.application.name}/dubbo.cache
+#日志打印配置
+logging:
+  level:
+#    普通打印日志级别
+    com.godboot.app: error
+#    SQL打印日志级别
+    com.godboot.app.mapper: debug

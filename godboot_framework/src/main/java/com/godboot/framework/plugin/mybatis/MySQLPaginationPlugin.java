@@ -51,11 +51,11 @@ public final class MySQLPaginationPlugin extends PluginAdapter {
      * @param name
      */
     private void addPage(TopLevelClass topLevelClass, IntrospectedTable introspectedTable, String name) {
-        topLevelClass.addImportedType(new FullyQualifiedJavaType("com.ludwig.framework.entity.Page"));
+        topLevelClass.addImportedType(new FullyQualifiedJavaType("com.godboot.framework.entity.Page"));
         CommentGenerator commentGenerator = context.getCommentGenerator();
         Field field = new Field();
         field.setVisibility(JavaVisibility.PROTECTED);
-        field.setType(new FullyQualifiedJavaType("com.ludwig.framework.entity.Page"));
+        field.setType(new FullyQualifiedJavaType("com.godboot.framework.entity.Page"));
         field.setName(name);
         commentGenerator.addFieldComment(field, introspectedTable);
         topLevelClass.addField(field);
@@ -64,13 +64,13 @@ public final class MySQLPaginationPlugin extends PluginAdapter {
         Method method = new Method();
         method.setVisibility(JavaVisibility.PUBLIC);
         method.setName("set" + camel);
-        method.addParameter(new Parameter(new FullyQualifiedJavaType("com.ludwig.framework.entity.Page"), name));
+        method.addParameter(new Parameter(new FullyQualifiedJavaType("com.godboot.framework.entity.Page"), name));
         method.addBodyLine("this." + name + "=" + name + ";");
         commentGenerator.addGeneralMethodComment(method, introspectedTable);
         topLevelClass.addMethod(method);
         method = new Method();
         method.setVisibility(JavaVisibility.PUBLIC);
-        method.setReturnType(new FullyQualifiedJavaType("com.ludwig.framework.entity.Page"));
+        method.setReturnType(new FullyQualifiedJavaType("com.godboot.framework.entity.Page"));
         method.setName("get" + camel);
         method.addBodyLine("return " + name + ";");
         commentGenerator.addGeneralMethodComment(method, introspectedTable);
