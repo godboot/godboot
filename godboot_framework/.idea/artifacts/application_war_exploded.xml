@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="application:war exploded">
-    <output-path>$PROJECT_DIR$/../godboot_application/target/application</output-path>
+    <output-path>$PROJECT_DIR$/../godboot-application/target/application</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="godboot-application" />
+          <element id="module-output" name="application" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE" />
@@ -104,7 +104,7 @@
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.5" />
           <element id="library" level="project" name="Maven: org.mybatis.generator:mybatis-generator-core:1.3.7" />
           <element id="archive" name="framework-1.0.jar">
-            <element id="module-output" name="godboot-framework" />
+            <element id="module-output" name="framework" />
           </element>
           <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.0.18.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.1.Final" />
@@ -115,9 +115,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../godboot_application/target/application/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../godboot-application/target/application/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="godboot-application/web/Web" />
+      <element id="javaee-facet-resources" facet="application/web/Web" />
     </root>
   </artifact>
 </component>

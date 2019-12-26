@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../godboot_application/godboot-application.iml" filepath="$PROJECT_DIR$/../godboot_application/godboot-application.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/godboot-framework.iml" filepath="$PROJECT_DIR$/.idea/godboot-framework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../godboot_mybatis_generator/godboot-mybatis-generator.iml" filepath="$PROJECT_DIR$/../godboot_mybatis_generator/godboot-mybatis-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../godboot-application/application.iml" filepath="$PROJECT_DIR$/../godboot-application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../godboot-framework/framework.iml" filepath="$PROJECT_DIR$/../godboot-framework/framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../godboot-mybatis-generator/godboot-mybatis-generator.iml" filepath="$PROJECT_DIR$/../godboot-mybatis-generator/godboot-mybatis-generator.iml" />
     </modules>
   </component>
 </project>

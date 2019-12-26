@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/../godboot_application" />
+    <file type="web" url="file://$PROJECT_DIR$/../godboot-application" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -12,6 +12,9 @@
         <option value="$PROJECT_DIR$/../godboot_mybatis_generator/pom.xml" />
         <option value="$PROJECT_DIR$/../godboot_application/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../godboot-framework/pom.xml" />
+        <option value="$PROJECT_DIR$/../godboot-application/pom.xml" />
+        <option value="$PROJECT_DIR$/../godboot-mybatis-generator/pom.xml" />
       </list>
     </option>
   </component>
