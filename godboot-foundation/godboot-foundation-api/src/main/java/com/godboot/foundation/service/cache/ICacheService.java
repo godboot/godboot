@@ -1,12 +1,14 @@
-package com.godboot.app.service;
+package com.godboot.foundation.service.cache;
 
-import com.godboot.app.cache.Cache;
 
+import com.godboot.foundation.cache.Cache;
+
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public interface ICacheService {
+public interface ICacheService extends Serializable {
     Boolean cacheValue(Cache cache, String key, Object value);
 
     <T> T getCacheValue(Cache cache, String key, Class<T> requiredType);

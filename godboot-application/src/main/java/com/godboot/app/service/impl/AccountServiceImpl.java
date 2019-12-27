@@ -1,9 +1,10 @@
 package com.godboot.app.service.impl;
 
 import com.godboot.app.appobject.AccountAO;
-import com.godboot.app.cache.Cache;
+import com.godboot.app.cache.AccountCache;
 import com.godboot.app.model.dto.AccountDTO;
-import com.godboot.app.service.ICacheService;
+import com.godboot.foundation.cache.Cache;
+import com.godboot.foundation.service.cache.ICacheService;
 import com.godboot.framework.constant.DATA_ENUM;
 import com.godboot.framework.entity.PageResult;
 import com.godboot.framework.entity.ServiceResult;
@@ -16,6 +17,7 @@ import com.godboot.app.model.search.AccountSearchDTO;
 import com.godboot.app.service.IAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.dubbo.config.annotation.Reference;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +57,7 @@ public class AccountServiceImpl implements IAccountService {
     @Autowired
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
 
-    @Autowired
+    @Reference
     private ICacheService cacheService;
 
     @Override
@@ -63,12 +65,17 @@ public class AccountServiceImpl implements IAccountService {
         AtomicInteger total = new AtomicInteger();
         AtomicReference<List<AccountDTO>> dtoList = new AtomicReference<>();
 
-        List<AccountDTO> cacheList = cacheService.getCacheList(new Cache() {
+        Cache cache = new Cache() {
             @Override
             public String prefix() {
-                return null;
+                return "demo";
             }
-        }, searchDTO.hashCode() + "", AccountDTO.class);
+        };
+
+        ServiceResult serviceResult = cacheService.getCacheValue(cache, searchDTO.hashCode() + "", ServiceResult.class);
+        if (serviceResult != null) {
+            return serviceResult;
+        }
 
         CountDownLatch countDownLatch = new CountDownLatch(2);
 
@@ -90,7 +97,11 @@ public class AccountServiceImpl implements IAccountService {
 
         countDownLatch.await();
 
-        return ServiceResult.SUCCESS(new PageResult<>(total.get(), dtoList.get()), "获取账户列表成功");
+        serviceResult = ServiceResult.SUCCESS(new PageResult<>(total.get(), dtoList.get()), "获取账户列表成功");
+
+        cacheService.cacheValue(cache, searchDTO.hashCode()+"", serviceResult);
+
+        return serviceResult;
     }
 
     @Override

@@ -1,8 +1,8 @@
 package com.godboot.app;
 
-import com.godboot.app.cache.Cache;
 import com.godboot.app.model.dto.AccountDTO;
-import com.godboot.app.service.ICacheService;
+import com.godboot.foundation.cache.Cache;
+import com.godboot.foundation.service.cache.ICacheService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ class DemoApplicationTests {
 
     @Test
     void contextLoads() {
-        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainApplication.class);
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Application.class);
         log.error("context: {}", applicationContext);
     }
 

@@ -5,9 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "com.godboot.app")
-@EnableDubbo(scanBasePackages = "com.godboot.app.service.impl")
-public class MainApplication {
+@EnableDubbo(scanBasePackages = "com.godboot.app.service")
+public class Application {
 	public static void main(String[] args) {
-		SpringApplication.run(MainApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

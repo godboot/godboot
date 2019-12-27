@@ -7,6 +7,7 @@ import com.godboot.framework.entity.PageResult;
 import com.godboot.framework.entity.ServiceResult;
 import com.godboot.framework.entity.SessionUser;
 
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -23,7 +24,7 @@ import java.util.List;
  * @copyright copyright
  * @see IAccountService
  */
-public interface IAccountService {
+public interface IAccountService extends Serializable {
     /**
      * 获取账户列表
      *
