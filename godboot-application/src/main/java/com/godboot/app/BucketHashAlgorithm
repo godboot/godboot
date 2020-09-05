@@ -14,11 +14,6 @@ import java.util.stream.Collectors;
 @Slf4j
 public class BucketHashAlgorithm {
     /**
-     * 存储hash长度权重值
-     */
-    private Map<Integer, Integer> numberLengthWeightSet;
-
-    /**
      * 计算hash权重
      *
      * @param maxHashNumberLength hash数字最大长度
@@ -36,11 +31,13 @@ public class BucketHashAlgorithm {
 
         Integer totalHashNumberWeight = new BigDecimal(Math.pow(10D, maxHashNumberLength)).setScale(0, BigDecimal.ROUND_UP).intValue();
 
+        /**
+         * 存储hash长度权重值
+         */
         Map<Integer, Integer> numberLengthWeightSet = new HashMap<>();
         for (Integer i = 1; i <= maxHashNumberLength; i++) {
             numberLengthWeightSet.put(i, new BigDecimal(Math.pow(10D, maxHashNumberLength - i)).setScale(0, BigDecimal.ROUND_UP).intValue());
         }
-        this.numberLengthWeightSet = numberLengthWeightSet;
 
         AtomicInteger totalWeight = new AtomicInteger(0);
         StringBuffer hash = new StringBuffer();
@@ -55,12 +52,12 @@ public class BucketHashAlgorithm {
              * 如果是兜底桶执行兜底桶逻辑
              */
             if (Integer.valueOf("1").equals(bucketHash.getBackUp())) {
-                doBackUpBucketHash(bucketHash, maxHashNumberLength, totalHashNumberWeight, new HashSet<>(), new HashMap<>());
+                doBackUpBucketHash(bucketHash, maxHashNumberLength, totalHashNumberWeight, numberLengthWeightSet, new HashSet<>(), new HashMap<>());
             } else {
                 /**
                  * 处理非兜底桶逻辑
                  */
-                doBucketHash(bucketHash, maxHashNumberLength, totalHashNumberWeight, hashNumberSet, defaultHashNumberSet);
+                doBucketHash(bucketHash, maxHashNumberLength, totalHashNumberWeight, numberLengthWeightSet, hashNumberSet, defaultHashNumberSet);
 
                 totalWeight.getAndAdd(bucketHash.getWeight());
                 hash.append("," + bucketHash.getHash());
@@ -79,7 +76,7 @@ public class BucketHashAlgorithm {
                 StringBuilder hashNumberBuilder = new StringBuilder();
                 Integer weight = 0;
 
-                while (tempTotalWeight <= totalHashNumberWeight && defaultHashNumberSet.size() > 0){
+                while (tempTotalWeight <= totalHashNumberWeight && defaultHashNumberSet.size() > 0) {
                     String remove = optionalHashList.remove(0);
                     hashNumberBuilder.append(remove + ",");
                     weight += numberLengthWeightSet.get(1);
@@ -111,8 +108,8 @@ public class BucketHashAlgorithm {
         return hashWeight;
     }
 
-    private BucketHash doBackUpBucketHash(BucketHash bucketHash, Integer maxHashNumberLength, Integer totalHashNumberWeight, Set<String> hashNumberSet, Map<String, String> defaultHashNumberSet) {
-        return doBucketHash(bucketHash, maxHashNumberLength, totalHashNumberWeight, hashNumberSet, defaultHashNumberSet);
+    private BucketHash doBackUpBucketHash(BucketHash bucketHash, Integer maxHashNumberLength, Integer totalHashNumberWeight, Map<Integer, Integer> numberLengthWeightSet, Set<String> hashNumberSet, Map<String, String> defaultHashNumberSet) {
+        return doBucketHash(bucketHash, maxHashNumberLength, totalHashNumberWeight, numberLengthWeightSet, hashNumberSet, defaultHashNumberSet);
     }
 
     /**
@@ -120,7 +117,7 @@ public class BucketHashAlgorithm {
      * @param maxHashNumberLength   允许输入最大长度
      * @param totalHashNumberWeight 总权重值
      */
-    private BucketHash doBucketHash(BucketHash bucketHash, Integer maxHashNumberLength, Integer totalHashNumberWeight, Set<String> hashNumberSet, Map<String, String> defaultHashNumberSet) {
+    private BucketHash doBucketHash(BucketHash bucketHash, Integer maxHashNumberLength, Integer totalHashNumberWeight, Map<Integer, Integer> numberLengthWeightSet, Set<String> hashNumberSet, Map<String, String> defaultHashNumberSet) {
         String hash = bucketHash.getHash();
 
         bucketHash.setWeight(0);
@@ -187,3 +184,4 @@ public class BucketHashAlgorithm {
         return bucketHash;
     }
 }
+     
