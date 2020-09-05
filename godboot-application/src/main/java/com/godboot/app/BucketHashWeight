@@ -1,0 +1,49 @@
+package com.leetcode.hash.weight;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+public class BucketHashWeight implements Serializable {
+    /**
+     * 全量hash
+     */
+    private String totalHash;
+
+    /**
+     * 总权重
+     */
+    private Integer totalWeight;
+
+    /**
+     * 总百分比权重
+     */
+    private Float totalWeightPercent;
+
+    /**
+     * 是否通过权重
+     */
+    private Boolean passWeight;
+
+    /**
+     * 可选择的hash值
+     */
+    private String optionalHash;
+
+    /**
+     * 桶列表
+     */
+    private List<BucketHash> buckets;
+
+    public BucketHashWeight() {
+        this.totalHash = "";
+        this.totalWeight = 0;
+        this.totalWeightPercent = 0F;
+        this.passWeight = Boolean.TRUE;
+        this.optionalHash = "0,1,2,3,4,5,6,7,8,9";
+    }
+}
